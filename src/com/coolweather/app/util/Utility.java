@@ -89,13 +89,15 @@ public class Utility {
 	public static void handleWeatherResponse(Context context,String response){
 		try {
 			JSONObject jsonObject = new JSONObject(response);
-			JSONObject weatherInfo = jsonObject.getJSONObject("weatherinfo");
-			String cityName = weatherInfo.getString("city");
-			String weatherCode = weatherInfo.getString("cityid");
-			String temp1 = weatherInfo.getString("temp1");
-			String temp2 = weatherInfo.getString("temp2");
-			String weatherDesp = weatherInfo.getString("weather");
-			String publishTime = weatherInfo.getString("ptime");
+			JSONObject result = jsonObject.getJSONObject("retData");
+			String cityName = result.getString("city");
+			String weatherCode = result.getString("citycode");
+			String temp1 = result.getString("l_tmp");
+			temp1 = temp1 + "¡æ";
+			String temp2 = result.getString("h_tmp");
+			temp2 = temp2 + "¡æ";
+			String weatherDesp = result.getString("weather");
+			String publishTime = result.getString("time");
 			saveWeatherInfo(context,cityName,weatherCode,temp1,temp2,weatherDesp,publishTime);
 		} catch (Exception e) {
 			e.printStackTrace();

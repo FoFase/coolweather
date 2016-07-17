@@ -16,10 +16,13 @@ public class HttpUtil {
 					URL url = new URL(address);
 					connection = (HttpURLConnection)url.openConnection();
 					connection.setRequestMethod("GET");
+					//填入apikey到HTTP header
+					connection.setRequestProperty("apikey",  "7606f03963df8eb750a3bb37639dcebf");
 					connection.setConnectTimeout(8000);
 					connection.setReadTimeout(8000);
+					connection.connect();//新加入代码
 					InputStream in = connection.getInputStream();
-					BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+					BufferedReader reader = new BufferedReader(new InputStreamReader(in,"UTF-8"));//以UTF-8解码
 					StringBuilder response = new StringBuilder();
 					String line;
 					while((line=reader.readLine())!=null){

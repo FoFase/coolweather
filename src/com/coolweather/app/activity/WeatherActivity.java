@@ -125,7 +125,7 @@ public class WeatherActivity extends Activity implements OnClickListener {
 	 * @param weatherCode
 	 */
 	private void queryWeatherInfo(String weatherCode) {
-		String address = "http://www.weather.com.cn/data/cityinfo/" + weatherCode + ".html";
+		String address = "http://apis.baidu.com/apistore/weatherservice/cityid?cityid=" + weatherCode;
 		queryFromServer2(address, "weatherCode");
 	}
 
