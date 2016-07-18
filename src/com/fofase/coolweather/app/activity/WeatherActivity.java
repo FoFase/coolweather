@@ -1,10 +1,10 @@
-package com.coolweather.app.activity;
+package com.fofase.coolweather.app.activity;
 
-import com.coolweather.app.R;
-import com.coolweather.app.service.AutoUpdateService;
-import com.coolweather.app.util.HttpCallbackListener;
-import com.coolweather.app.util.HttpUtil;
-import com.coolweather.app.util.Utility;
+import com.fofase.coolweather.app.R;
+import com.fofase.coolweather.app.service.AutoUpdateService;
+import com.fofase.coolweather.app.util.HttpCallbackListener;
+import com.fofase.coolweather.app.util.HttpUtil;
+import com.fofase.coolweather.app.util.Utility;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,6 +19,8 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import net.youmi.android.banner.AdSize;
+import net.youmi.android.banner.AdView;
 
 public class WeatherActivity extends Activity implements OnClickListener {
 
@@ -86,6 +88,12 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		
 		switchCity.setOnClickListener(this);
 		refreshWeather.setOnClickListener(this);
+		//实例化广告条
+		AdView adView = new AdView(this,AdSize.FIT_SCREEN);
+		//获取要嵌入广告的布局
+		LinearLayout adLayout = (LinearLayout)findViewById(R.id.adLayout);
+		//将广告条加入布局中
+		adLayout.addView(adView);
 	}
 
 	@Override

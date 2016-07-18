@@ -1,4 +1,4 @@
-package com.coolweather.app.model;
+package com.fofase.coolweather.app.model;
 
 public class Province {
 

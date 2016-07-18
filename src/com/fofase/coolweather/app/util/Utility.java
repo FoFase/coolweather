@@ -1,4 +1,4 @@
-package com.coolweather.app.util;
+package com.fofase.coolweather.app.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -6,10 +6,10 @@ import java.util.Locale;
 
 import org.json.JSONObject;
 
-import com.coolweather.app.model.City;
-import com.coolweather.app.model.CoolWeatherDB;
-import com.coolweather.app.model.County;
-import com.coolweather.app.model.Province;
+import com.fofase.coolweather.app.model.City;
+import com.fofase.coolweather.app.model.CoolWeatherDB;
+import com.fofase.coolweather.app.model.County;
+import com.fofase.coolweather.app.model.Province;
 
 import android.content.Context;
 import android.content.SharedPreferences;

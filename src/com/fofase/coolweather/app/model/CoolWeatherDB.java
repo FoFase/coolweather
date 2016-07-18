@@ -1,9 +1,9 @@
-package com.coolweather.app.model;
+package com.fofase.coolweather.app.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.coolweather.app.db.CoolWeatherOpenHelper;
+import com.fofase.coolweather.app.db.CoolWeatherOpenHelper;
 
 import android.content.ContentValues;
 import android.content.Context;
